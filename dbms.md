@@ -564,7 +564,7 @@ eg
 
 - PK is the parent and FK is called the child.
 - This one time process during table creation
--  after the foreign key with out comma
+-  after the foreign key without comma
 - so now any update/delete in the parent will get reflect in child as well
 
 - syntax = 
@@ -593,6 +593,9 @@ eg
 - In case PK, if any column id matched it will replace the row with the new data else insert the new data
 - In case !PK if any column id matched it will only insert the row with the new data i.e duplicasey
 
+- NOTE:: REPLACE works as follows: If no matching value is found with the existing data row, then a standard INSERT statement is performed and If the record is already existing, the REPLACE command will delete the existing data in the row and then add the new record in the table. If we have not specified the column's value in the SET statement, the Replace command works like the UPDATE statement as it will use the already existing/default data.
+  - REPLACE INTO works like an INSERT, but deletes and re-inserts the row if a duplicate key is found (typically on the PRIMARY KEY or UNIQUE column).
+  
 - USED WHEN
   - insert a new row in the column when duplicate key is there
   - ie insertion fails due to dupliate key error

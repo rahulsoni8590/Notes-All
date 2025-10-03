@@ -1,5 +1,7 @@
+# Lecture-1 [WEEK-1]
+
 # OS
-- User {customer} >> Applicaton {waiter} >> Operating system {manager} >> hardware[cpu,gpu,disk,usb,etc] {chef,cupboard,counte-top}
+- User {customer} >> Application {waiter} >> Operating system {manager} >> hardware[cpu,gpu,disk,usb,etc] {chef,cupboard,counte-top}
 - Used for resource management. see SS
 - Provides an interface for communication between the application and hardware.  
 - Hides the hardware complexity from application
@@ -7,7 +9,7 @@
 ## Abstraction [Hides-complexity] and Arbitration [Resource-Management]:
 
 - Managing the resouces eg multiple apps running simultaneously 
-- hiding the underlining complexity eg using copy-paste,scanner,output-hardware[soundbar],sylus.
+- hiding the underlining complexity eg using copy-paste,scanner,output-hardware[soundbar],stylus.
 - Memory allocation and ram management based on usage of app.
 
 
@@ -140,18 +142,16 @@
         - Memory
         - FS (filesystem)
         - USB, Keyboard, Mouse
-    
-    - Open
-    - read
-    - attact
-    - deattach
+    - system calls are
+        - Open
+        - read
+        - attach
+        - deattach
     
 4. Information Maintenance
-    - Date&time, freespace, allocated memory, free memory, OS version
-        proceess id.
-    
-    - getpid
-    - getppid
+    - Date&time, freespace, allocated memory, free memory, OS version, proceess id.
+    - getpid() = process id
+    - getppid() = parent process id
 
 5. Communication management
     - pipe
@@ -159,3 +159,70 @@
     - mmap
 
 
+## OS Design Principle:
+
+1. Policy = set of rules
+    - least recently used policy
+2. Mechanism = Method to fullfill the rule/policy/abstraction.
+
+- Principles:
+1. Clear segregation/separation b/w mechanism and policy
+2. Common use cases.
+3. Should Macro-manage and not micro-manage.
+
+# Lecture-2 [WEEK-1]
+
+## Process
+
+- Defi = A program or application under execution. It is the unit of work done by the computer.
+- nproc = to see number of cpu of machine.
+- CPU can only run one process at a time but with the help of OS [virtulaization of CPU [abstraction] and timesharing[mechanism] and policy [scheduling process]] it can run multiple process at a time.
+    - ./file.sh A & ./file.sh B & ./file.sh C
+    - we are running 3 shell scrip simultaneously with input as A,B,C.
+
+## Architecture of process
+
+- How OS create a process
+    1. Load the program and static data for initialization
+    2. Allocate runtime stack eg localvariable,fn-parameters and returns.
+    3. Allocate heap memory to program. eg dynamically allocated variables.
+    4. Task for I/O and error descriptors
+    5. go to main fn of the program and transfer the control of cpu to program.
+    6. now program will have access of cpu and it is converted to process.
+
+## Attributes of process
+
+- Process table have Process Control Blocks [pcb] for each process.
+- PCB stores the attribute/feature of a process. Attributes are
+    - ProcessID = unique identifier of process
+    - Program-counter = address of next instruction of the program
+    - Process State - 
+    - Priority
+    - General Purpose Registers - store data or variable.
+    - List of open files
+    - List of open Devices - storing open I/O device
+
+## Basic of storage Devices
+
+- Register [fastest, store bit of data eg 1 and zero] >>> Cache >>> Main memory[RAM] >>> Electronic Disk >>> Magnetic Disk >>> Optical Disk >>> Magnetic tapes
+
+- From Register to main memory = Primary Memory
+    - cost more and size less.
+    - volatile memory.
+- From Electtronic disk to magnetic tapes = Secondary memory
+    - size more and cost less.
+    - non volatile memory.
+
+## Process States:
+
+- New = OS is about to pick program and convert into process.
+- Ready = Picker by os and stored in main memory
+- Running = CPU is allocated
+- Termination = Process exit
+- Wait/block = process is waiting for I/O. meanwhile cpu is assigned with new process.
+- suspend/Ready = process in ready state but with no free memory and any higher priority process in the queue. copy the process from mainmemory to secondary memory
+- suspend/wait = when a process is waiting for I/O and when there is no free memory and there is higher priority process in the queue. copy the process from mainmemory to secondary memory
+
+## Process Queue:
+
+- 

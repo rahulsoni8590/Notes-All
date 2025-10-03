@@ -502,7 +502,7 @@ You can create an array in JavaScript using various methods:
     const x = 10;
     ```
 
-- let and const are blocked scope and var is functional scope ie let and const cannot be accesed outside the blocked scope whereas var cannot be accesed ouside the functional scope. For eg if let, var and const are define inside if-block they cannot be accessed outside if-block but var can be accesed out also if let,var and const are defined inside the function then in this case var will not be accessed outside it along with let and const.
+- let and const are blocked scope and var is functional scope ie let and const cannot be accesed outside the blocked scope whereas var cannot be accesed ouside the functional scope. For eg if let, var and const are define inside if-block they cannot be accessed outside if-block but var can be accesed outside and also if let,var and const are defined inside the function then in this case var will not be accessed outside it along with let and const.
 
 # 22. What is an Immediately Invoked Function in JavaScript?
 

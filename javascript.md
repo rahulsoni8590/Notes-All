@@ -161,6 +161,8 @@ console.log(arr.__proto__.__proto__);
   this.name = points to object literal variable
   name = point to the window object variable
 
+- in call and apply we need to pass the second-paramenter and in BIND no need to find second parameter.
+
 ```javascript
 let name = "rahul";
 let age = 26;

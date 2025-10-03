@@ -1,43 +1,41 @@
-{
-environment variable
-currying
-hoisting
-closure
-call, apply, bind
-event loop in nodejs
-microtask queue / priority queue
-primitive and non primitive
-text vs varchar in mysql
-tags vs elements in html
-canvas
-self closing tags
-joins in mysql
-life cycle methods
-hooks
-usememo
-relational vs non relational database
-cap theorem mongodb SD
-learn MYSQL
-latest html5 and react version and feature
-JWT mechanism
-promise vs asynch await
-img vs figure
-reducer hook
-how to control rerendering in react >> usememo, lifecycle methods and more
-explain oops concepts in js
-what are callback in node/js
-grid vs flex
-pseudo class vs pseudo element
-media screen
-box model
-flex property - >> flex-grow, flex-shrink,flex-basis
-id vs class in css
-ways to add css in html file only >> using style tags and inline css
-EJS?
+- Environment Variable
+- Currying
+- Hoisting
+- Closure
+- Call, Apply, Bind
+- Event Loop In Nodejs
+- Microtask Queue / Priority Queue
+- Primitive And Non Primitive
+- Text Vs Varchar In Mysql
+- Tags Vs Elements In Html
+- Canvas Element
+- Self Closing Tags
+- Joins In Mysql
+- Life Cycle Methods
+- Hooks
+- Usememo
+- Relational Vs Non Relational Database
+- Cap Theorem Mongodb Sd
+- Learn Mysql
+- Latest Html5 And React Version And Feature
+- Jwt Mechanism
+- Promise Vs Asynch Await
+- Img Vs Figure
+- Reducer Hook
+- How To Control Rerendering In React >> Usememo, Lifecycle Methods And More
+- Explain Oops Concepts In Js
+- What Are Callback In Node/Js
+- Grid Vs Flex
+- Pseudo Class Vs Pseudo Element
+- Media Screen
+- Box Model
+- Flex Property - >> Flex-Grow, Flex-Shrink,Flex-Basis
+- Id Vs Class In Css
+- Ways To Add Css In Html File Only >> Using Style Tags And Inline Css
+- Ejs?
 
-}
 
-CSS Positions
+# CSS Positions
 
 - fixed = fixed wrt to vp
 - static= default
@@ -47,24 +45,24 @@ CSS Positions
 
 ---
 
-diff flex and grid
+# Difference flex and grid
 
-Grid is made for a two-dimensional layout
-while Flexbox is for one.
-This means Flexbox can work on either row or columns at a time, but Grids can work on both.
+- Grid is made for a two-dimensional layout
+- while Flexbox is for one.
+- This means Flexbox can work on either row or columns at a time, but Grids can work on both.
 
-Flexbox works on content first approach
-Grid is based on the layout first approach
+- Flexbox works on content first approach
+- Grid is based on the layout first approach
 
-The Flexbox layout small-scale design,
-the Grid layout is designed for larger-scale layouts that are not linear in design.
+- The Flexbox layout small-scale design,
+- the Grid layout is designed for larger-scale layouts that are not linear in design.
 
 ---
 
-diff betweeen pseudo-classes and pseudo-elements
+# Difference betweeen pseudo-classes and pseudo-elements
 
 The single colon : refers to pseudo-classes
-are primarily used to style an element that's under various states. When referring to state, this includes the condition or user behavior, for example hover, active, focus, or disabled. States generally involve user interaction.
+Are primarily used to style an element that's under various states. When referring to state, this includes the condition or user behavior, for example hover, active, focus, or disabled. States generally involve user interaction.
 eg active,focus,target,hover,visited,focus-visible
 
 The double colon :: refers to pseudo-elements
@@ -74,34 +72,95 @@ eg after, before
 
 ---
 
-OOPS::
+# OOPS::
 
-OBject::
+## OBject::
 
-Object: An Object is a unique entity that contains properties and methods. For example “a car” is a real-life Object, which has some characteristics like color, type, model, and horsepower and performs certain actions like driving. The characteristics of an Object are called Properties in Object-Oriented Programming and the actions are called methods. An Object is an instance of a class. Objects are everywhere in JavaScript, almost every element is an Object whether it is a function, array, or string.
+- Object: An Object is a unique entity that contains properties and methods. For example “a car” is a real-life Object, which has some characteristics like color, type, model, and horsepower and performs certain actions like driving. The characteristics of an Object are called Properties in Object-Oriented Programming and the actions are called methods. An Object is an instance of a class. Objects are everywhere in JavaScript, almost every element is an Object whether it is a function, array, or string.
 
-Note: A Method in javascript is a property of an object whose value is a function.
+- Note: A Method in javascript is a property of an object whose value is a function.
 
-The object can be created in two ways in JavaScript:
+- The object can be created in two ways in JavaScript:
 
-Object Literal
-Object Constructor
+- Object Literal
+- Object Constructor
 
-Classes::
+## Classes::
 
-Classes: Classes are blueprints of an Object. A class can have many Objects because the class is a template while Objects are instances of the class or the concrete implementation.
+- Classes: Classes are blueprints of an Object. A class can have many Objects because the class is a template while Objects are instances of the class or the concrete implementation.
 Before we move further into implementation, we should know unlike other Object Oriented languages there are no classes in JavaScript we have only Object. To be more precise, JavaScript is a prototype-based Object Oriented Language, which means it doesn’t have classes, rather it defines behaviors using a constructor function and then reuses it using the prototype.
 
-Abstraction: Abstraction means displaying only essential information and hiding the details. Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
+- Abstraction: Abstraction means displaying only essential information and hiding the details. Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation.
 
-Encapsulation: The process of wrapping properties and functions within a single unit is known as encapsulation.
+- Encapsulation: The process of wrapping properties and functions within a single unit is known as encapsulation.
 
-Inheritance: It is a concept in which some properties and methods of an Object are being used by another Object. Unlike most of the OOP languages where classes inherit classes, JavaScript Objects inherit Objects i.e. certain features (property and methods) of one object can be reused by other Objects.
+- Inheritance: It is a concept in which some properties and methods of an Object are being used by another Object. Unlike most of the OOP languages where classes inherit classes, JavaScript Objects inherit Objects i.e. certain features (property and methods) of one object can be reused by other Objects.
 
-Polymorphism: Polymorphism is one of the core concepts of object-oriented programming languages. Polymorphism means the same function with different signatures is called many times. In real life, for example, a boy at the same time may be a student, a class monitor, etc. So a boy can perform different operations at the same time. Polymorphism can be achieved by method overriding and method overloading
+- Polymorphism: Polymorphism is one of the core concepts of object-oriented programming languages. Polymorphism means the same function with different signatures is called many times. In real life, for example, a boy at the same time may be a student, a class monitor, etc. So a boy can perform different operations at the same time. Polymorphism can be achieved by method overriding and method overloading
 
+```js
+
+// Abstraction (Abstract Class)
+class Animal {
+    constructor(type) {
+        if (new.target === Animal) {
+            throw new Error("Cannot instantiate an abstract class");
+        }
+        this.type = type; // Public property
+    }
+
+    makeSound() {
+        throw new Error("Abstract method must be implemented");
+    }
+}
+
+// Encapsulation (Private and Public Fields)
+class Dog extends Animal {
+    #name; // Private field
+
+    constructor(name, age) {
+        super("Dog"); // Passing "type" to parent class
+        this.#name = name; // Private variable
+        this.age = age; // Public variable
+    }
+
+    // Getter for private name
+    get name() {
+        return this.#name;
+    }
+
+    // Setter for private name
+    set name(newName) {
+        this.#name = newName;
+    }
+
+    makeSound() {
+        return "Bark!";
+    }
+
+    // Static Method
+    static info() {
+        return "Dogs are loyal animals.";
+    }
+}
+
+// Usage
+const dog = new Dog("Buddy", 3);
+
+console.log(dog.name);    // Using getter for private field
+dog.name = "Max";        // Using setter
+console.log(dog.name);
+
+console.log(dog.age);     // Accessing public field
+dog.age = 4;             // Modifying public field
+console.log(dog.age);
+
+console.log(dog.makeSound()); // Abstraction in action
+console.log(Dog.info()); // Static method call
+console.log(dog.type);   // Public property from parent class
+```
 ---
-
+# Throttling
 Throttling helps limit the rate of function calls to prevent overwhelming the system  
 debouncing delays function execution to handle situations where rapid or frequent calls are expected. Both techniques contribute to improving performance, optimizing resource usage, and enhancing the overall user experience in web applications.
 
@@ -111,7 +170,7 @@ Debouncing is typically used in scenarios where a function is called repeatedly,
 
 ---
 
-Forms
+# Forms
 
 1. **action**: Specifies the URL where form data is sent when the form is submitted.
 
