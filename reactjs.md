@@ -2669,6 +2669,7 @@ function ItemCard({ name, price }) {
     JSX
     </>
   )
+}
 ```
 
 ## Custom Provide

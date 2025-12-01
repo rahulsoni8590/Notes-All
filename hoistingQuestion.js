@@ -107,22 +107,28 @@ Question 10 explains how default parameters work in functions.
 
 // // 6
 // var x = 1;
-
+// var y = 10
 // function outer() {
 //     var x = 2;
-
+//     y = 20
 //     function inner() {
 //         var x = 3;
+//         y = 30
 //         console.log(x);
+//         console.log(y);
+
 //     }
 
 //     inner();
 //     console.log(x);
+//     console.log(y);
 // }
 
 // outer();
 // console.log(x);
+// console.log(y);
 // // ans = 3 2 1
+// // and = 30 30 30
 
 // // 7
 
